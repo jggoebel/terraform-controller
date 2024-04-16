@@ -310,6 +310,7 @@ func (r *Runner) WriteConfigFile() error {
 
 func (r *Runner) WriteVarFile() error {
 	vars, ok := r.VarSecret.Data["varFile"]
+	logrus.Info("%v", vars)
 	if !ok {
 		return fmt.Errorf("no varFile data found in secret %v", r.VarSecret.Name)
 	}

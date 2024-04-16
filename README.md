@@ -1,3 +1,13 @@
+# SVA Usage:
+
+Build executor
+`./scripts/build-executor` will build the `terraform-executor` binary inside the `/bin` folder.
+
+Build the container image (inside the `/bin` folder exectute):
+`docker build -t <name> -f ../package/Dockerfile.executor .`
+
+Inside the `package/Dockerfile.executor` we can increase the Terraform version to the one we need.
+
 [EXPERIMENTAL] terraform-controller
 ========
 
